@@ -39,3 +39,61 @@ Unknown
 ## WINBOND 25064FVS10 1440
 
 Unknown
+
+## 472 APΔ .W49C
+
+Unknown
+
+## RAO5 AHΔ T51C
+
+Unknown
+
+## ALC3231 EBK2...(unreadable chars)
+
+Unknown
+
+## IT8556E 1451-FXS SC2TKA
+
+Unknown
+
+## GL8506 KJE0631 4491211
+
+Unknown
+
+## PI3L 720ZHE 1503GG
+
+Unknown
+
+## 3H 1M 22T
+
+Unknown
+
+## PS8338B A1 U08FAC AWMSP 0315
+
+Unknown
+
+## 3257A 03 25 +8D450
+
+Unknown
+
+## 12 EAR39F43 G1218V
+
+Unknown
+
+## S472 ALΔ W51C
+
+Unknown
+
+## S412 FTΔ N49K
+
+Unknown
+
+## RH4VC
+
+Unknown
+
+## 330 DEPK
+
+Unknown
+
+## Intel Dual Band Wireless-AC 7265
