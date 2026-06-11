@@ -7,7 +7,7 @@ Board Date: 2014-11-10
 ---
 
 ## Phase 0 - Identification
-
+ 
 - [x] Identify motherboard model
 - [x] Identify CPU model
 - [ ] Photograph front side
