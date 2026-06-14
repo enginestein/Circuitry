@@ -4,6 +4,8 @@
 
 This is an input / output controller. Power management, keyboard inputs and system monitoring are the kind of tasks it handles.
 
+Power button sends the first signal to this.
+
 ## NCP81101
 
 This is a synchronous single phase buck controller. It's a step down controller, as it regulates the DC input to the required, lower DC value before passing it down the motherboard.
@@ -12,17 +14,23 @@ This is a synchronous single phase buck controller. It's a step down controller,
 
 1000 base-T gigabit ethernet LAN magnetic filter
 
+From what I know, ethernet cables, due to their architecture, generate a lot of noise and this device provides galvanic isolation which filters out all that electrical noise.
+
 ## 34AL 2503 V68LM 
 
 Unknown
 
 ## (+) 220 J40
 
-Unknown
+This must be a capacitor, very likely placed above a fingerprint reader (FPR). the (+) sign indicates a polarized capacitor while the "220" suggests it's 220 microfarad. it is marked as C51 on the motherboard, most likely the capacitor C51.
 
 ## NEY jJ8
 
-Unknown
+Most likely a film capacitor (from it's looks).
+
+I found out that there's two metal components above both NEY jJ8 components, which is most likely an inductor which suggests that it might be a output capacitor for a buck converter (PC73, PC75), used for power rail filtering and satbilization (PJ2, PJ3)
+
+There's a MOSFET nearby which says PQ22
 
 ## 80 24780 I3 48 C3NZ
 
@@ -97,3 +105,5 @@ Unknown
 Unknown
 
 ## Intel Dual Band Wireless-AC 7265
+
+Unknown

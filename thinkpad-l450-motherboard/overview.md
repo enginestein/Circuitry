@@ -25,12 +25,12 @@ Board Date: 2014-11-10
 
 - [ ] Locate CPU
 - [ ] Locate Platform Controller Hub (PCH)
-- [ ] Locate Embedded Controller (EC)
-- [ ] Locate BIOS flash chip
+- [x] Locate Embedded Controller (EC)
+- [x] Locate BIOS flash chip
 - [ ] Locate Ethernet controller
-- [ ] Locate Audio codec
+- [x] Locate Audio codec
 - [ ] Locate USB controllers
-- [ ] Locate Power Management ICs
+- [x] Locate Power Management ICs
 
 ### Documentation
 
@@ -99,9 +99,9 @@ Board Date: 2014-11-10
 
 ### BIOS
 
-- [ ] Locate BIOS flash chip
-- [ ] Identify manufacturer
-- [ ] Determine flash capacity
+- [x] Locate BIOS flash chip
+- [x] Identify manufacturer
+- [x] Determine flash capacity
 - [ ] Dump BIOS image
 
 ### Analysis
@@ -123,8 +123,8 @@ Board Date: 2014-11-10
 
 ### Identification
 
-- [ ] Identify EC model
-- [ ] Obtain datasheet
+- [x] Identify EC model
+- [x] Obtain datasheet
 - [ ] Document pinout
 
 ### Function Analysis
