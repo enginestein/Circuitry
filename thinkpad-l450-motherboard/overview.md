@@ -10,11 +10,8 @@ Board Date: 2014-11-10
  
 - [x] Identify motherboard model
 - [x] Identify CPU model
-- [ ] Photograph front side
-- [ ] Photograph back side
-- [ ] Create motherboard repository
-- [ ] Create project structure
-- [ ] Record board dimensions
+- [x] Create motherboard repository
+- [x] Create project structure
 - [ ] Document all connectors
 
 ---
@@ -27,17 +24,17 @@ Board Date: 2014-11-10
 - [ ] Locate Platform Controller Hub (PCH)
 - [x] Locate Embedded Controller (EC)
 - [x] Locate BIOS flash chip
-- [ ] Locate Ethernet controller
+- [x] Locate Ethernet controller
 - [x] Locate Audio codec
-- [ ] Locate USB controllers
+- [x] Locate USB controllers
 - [x] Locate Power Management ICs
 
 ### Documentation
 
 - [ ] Photograph each major IC
-- [ ] Record part numbers
+- [x] Record part numbers
 - [ ] Download datasheets
-- [ ] Create chip inventory table
+- [x] Create chip inventory table
 - [ ] Label motherboard map
 
 ---
@@ -75,7 +72,7 @@ Board Date: 2014-11-10
 
 - [ ] Locate DC input path
 - [ ] Identify protection circuitry
-- [ ] Identify charger IC
+- [x] Identify charger IC
 - [ ] Identify battery management circuitry
 
 ### Power Rails
@@ -102,20 +99,20 @@ Board Date: 2014-11-10
 - [x] Locate BIOS flash chip
 - [x] Identify manufacturer
 - [x] Determine flash capacity
-- [ ] Dump BIOS image
+- [x] Dump BIOS image
 
 ### Analysis
 
-- [ ] Inspect UEFI structure
-- [ ] Extract firmware modules
-- [ ] Identify Intel ME region
-- [ ] Document firmware layout
+- [x] Inspect UEFI structure
+- [x] Extract firmware modules
+- [~] Identify Intel ME region *ME region confirmed absent from FL1 capsule, need more analysis
+- [x] Document firmware layout
 
 ### Tools
 
-- [ ] Configure flashrom
-- [ ] Configure UEFITool
-- [ ] Configure binwalk
+- [x] Configure flashrom
+- [x] Configure UEFITool
+- [x] Configure binwalk
 
 ---
 
@@ -131,9 +128,9 @@ Board Date: 2014-11-10
 
 - [ ] Keyboard interface
 - [ ] Battery interface
-- [ ] Fan control
-- [ ] Power button handling
-- [ ] Sleep state management
+- [x] Fan control
+- [x] Power button handling
+- [x] Sleep state management
 
 ---
 
@@ -147,11 +144,11 @@ Board Date: 2014-11-10
 ### SMBus / I²C
 
 - [ ] Trace battery communications
-- [ ] Trace sensor communications
+- [x] Trace sensor communications *(Mapped Thermal Sensors HT0/HT1 in DSDT)*
 
 ### LPC / eSPI
 
-- [ ] Trace EC ↔ PCH
+- [x] Trace EC ↔ PCH *(Mapped ECOR space over LPC bus)*
 
 ### USB
 
@@ -168,12 +165,12 @@ Board Date: 2014-11-10
 
 ### Sequence Reconstruction
 
-- [ ] Power button event
-- [ ] EC startup
+- [x] Power button event *(Mapped HWAK tracking logic)*
+- [x] EC startup *(Mapped ECOR fields and lifecycle initialization)*
 - [ ] Power rail enable sequence
 - [ ] CPU reset release
-- [ ] BIOS execution
-- [ ] POST sequence
+- [x] BIOS execution *(Isolated DxeMain core execution initialization)*
+- [x] POST sequence *(Mapped physical Port 80 tracking loop via D80P)*
 - [ ] Boot device initialization
 
 ### Documentation
@@ -217,6 +214,6 @@ Board Date: 2014-11-10
 - [ ] Power tree diagram
 - [ ] Bus map
 - [ ] Boot process map
-- [ ] Firmware notes
+- [x] Firmware notes
 - [ ] Component database
 - [ ] Publish findings

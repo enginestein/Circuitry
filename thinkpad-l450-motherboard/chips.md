@@ -18,7 +18,10 @@ From what I know, ethernet cables, due to their architecture, generate a lot of 
 
 ## 34AL 2503 V68LM 
 
-Unknown
+Analysis
+
+* 4 pins each side, a 16 pin package
+
 
 ## (+) 220 J40
 
@@ -30,23 +33,49 @@ Most likely a film capacitor (from it's looks).
 
 I found out that there's two metal components above both NEY jJ8 components, which is most likely an inductor which suggests that it might be a output capacitor for a buck converter (PC73, PC75), used for power rail filtering and satbilization (PJ2, PJ3)
 
-There's a MOSFET nearby which says PQ22
+There's a MOSFET nearby which says PQ22.
 
 ## 80 24780 I3 48 C3NZ
 
-Unknown
+Analysis:
+
+* 7 pins each side (4 sides, square)
+* 28 pin package
+* not qfn
+* from persepective: above the white stripe - down side pin 1 (black probe) connected to up side pin 5 (red probe) shows ".463v" on multimeter. upper pin 3, 7 also show values. pin 7 = 1.423v, pin 5 = 0.468v (all in continuity mode)
+* Such values can be seen on each side of the package, but only if the black probe is on the lower side's pin 1.
+* no beeps in any case
+
+Verdict: Probably an active IC.
 
 ## L08-1 4496 
 
-Unknown
+Analysis:
+
+* 4 pins each two sides, 8 pin package
 
 ## P24JPVSP 7B 343 VG450
 
-Unknown
+Analysis:
+
+Continuity beep map:
+
+pin 4 -> 4
+pin 5 -> 10
+pin 11 -> 4
+
+total 14 pins each two sides.
+
+UTPM1 is it's marking on the board, it might be a trusted platform module (specialized cryptographic chip designed to secure hardware)
+
+
+Verdict:
+
+TPM/Security IC
 
 ## WINBOND 25064FVS10 1440
 
-Unknown
+BIOS flash chip, 8MB of SPI flash which holds the UEFI/BIOS firmware.
 
 ## 472 APΔ .W49C
 
@@ -64,13 +93,13 @@ Unknown
 
 Unknown
 
-## GL8506 KJE0631 4491211
+## GL850G KJE0631 4491211
 
-Unknown
+USB 2.0 hub controller, it splits a single USB upstream port from an intel CPU to multiple external USB ports.
 
 ## PI3L 720ZHE 1503GG
 
-Unknown
+gigabit ethernet mux/demux. Simple mux logic but for ethernet data, which converts ethernet data from a single PHY device to two different ports without signal degradation.
 
 ## 3H 1M 22T
 
@@ -78,7 +107,7 @@ Unknown
 
 ## PS8338B A1 U08FAC AWMSP 0315
 
-Unknown
+DisplayPort dual mode source demux (1:2), takes one DisplayPort (the device generating the video and audio signals) and routes it to two selectable DisplayPort outputs.
 
 ## 3257A 03 25 +8D450
 
@@ -106,4 +135,4 @@ Unknown
 
 ## Intel Dual Band Wireless-AC 7265
 
-Unknown
+Wi-Fi 5 and bluetooth 4.2 network adapter device

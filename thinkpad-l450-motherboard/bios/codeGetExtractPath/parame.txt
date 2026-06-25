@@ -1,0 +1,62 @@
+SCT Flash Utility for Lenovo
+ for Windows V1.0.2.9
+Copyright (c) 2011-2015 Phoenix Technologies Ltd.
+Copyright (c) 2011-2015 Lenovo Group Limited.
+
+Usage: Flash [COMMAND]
+
+bak      [filename]       Backup BIOS ROM before flash.
+bbl                       Flash boot block.
+bcp      [EVSA binary]    Overwrite BCP data.
+bcplogo  [BCP name] [file name] [Image ID] Replace logo image stored in BCP.
+cac                       Check AC power is on.
+cbp      threshold        Check battery power in percentage.
+cvar                      Clear variables.
+dat      string           Specify the asset tag DMI string.
+dmc      string           Specify the chassis manufacturer DMI string.
+dmm      string           Specify the motherboard manufacturer DMI string.
+dks      string           Specify the SKU number DMI string.
+dms      string           Specify the system manufacturer DMI string.
+dos      [string;string2;...]|[index1 string1 ...] Specify the OEM DMI strings.
+dpc      string           Specify the chassis asset tag number DMI string.
+dpm      string           Specify the motherboard product ID DMI string.
+dps      string           Specify the system product ID DMI string.
+dsc      string           Specify the chassis serial number DMI string.
+dsm      string           Specify the motherboard serial number DMI string.
+dss      string           Specify the system serial number DMI string.
+dus      [uuid] [overwrite] Specify the UUID DMI string.
+dvc      string           Specify the chassis version DMI string.
+dvm      string           Specify the motherboard version DMI string.
+dvs      string           Specify the system version DMI string.
+endkey                    Required key press after flashing.
+ese                       Enable security examiner.
+exit                      Exit program after flash completed.
+file     filename         Indicate BIOS image file for flash.
+help                      Show command list.
+ipf      [region name]|all Flash specific region
+logo     filename [ImageId] [filename] [ImageId] ... Replace logo.
+ls       [ImageId] ...    Reserve logo in BIOS ROM.
+mod      filename         Replace a FFS module.
+nodelay                   No delay after flash.
+nodrom                    No decomposing ROM when crisis recovery.
+noerror                   Do not display error messages.
+nowarn                    Do not display warning messages.
+oc       string           Specify the OEM command line.
+p                         Production mode. Disable simple text output.
+prog     start size       Flash specific area. Both parameters in hexadecimal.
+patch                     Patch mode. To patch particular data to current BIOS.
+raw      GUID filename [Index] Replace raw section of FFS module.
+rsbr     GUID1 GUID2 ...  Reserve sub-regions with specified GUIDs.
+sd                        Skip BIOS build date time checking.
+silent                    Silent operation (no beeps).
+slp      filename         Replace SLP marker or MSDM key.
+spu      filename 20|21   Replace SLP public key.
+ss                        Skip all SLP sub-regions.
+sn                        Skip part number checking.
+shutdown                  Shutdown after flash completed instead of reboot.
+v                         Enable flash verification.
+vbl                       Enable Microsoft Bit-locker check.
+vcpu     [filename]       Update variable size CPU microcode.
+wb                        Flash without skipping same content blocks.
+write    filename start [fdla] Write a binary file to specific physical address or FDLA.
+wsbr     GUID filename    Write a binary file to specific sub-region.
