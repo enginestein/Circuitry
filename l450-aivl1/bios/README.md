@@ -114,3 +114,10 @@ Upon PCH power rail recovery, `Method (\_WAK, 1)` processes inverse stabilizatio
 * `/codeGetExtractPath/module_4244.exe` - Carved x86-64 `DxeMain` module.
 * `/codeGetExtractPath/thinkpad_dsdt.aml` - Raw ACPI binary block slice.
 * `/codeGetExtractPath/thinkpad_dsdt.dsl` - Fully decompiled, human-readable ASL schematic source text.
+* `/codeGetExtractPath/lenovo_ssdt1.aml` + `.dsl` - Carved + decompiled Lenovo SSDT1 (56 B stub).
+* `/codeGetExtractPath/lenovo_ssdt2.aml` + `.dsl` - Carved + decompiled Lenovo SSDT2 (LCD backlight `_BCL/_BCM/_BQC`, iGPU + dGPU).
+* `/acpi-hotkey.md` - SSDT analysis + complete `HKEY` (`LEN0068`) method reference and EC query → hotkey event dispatch table.
+* `/acpi-ssdt.md` - Full 25-SSDT inventory (carves + roles): SgPeg/SgPch, MeSsdt, IFFS (INT3392), ISCT (INT33A0), SATA (SAT1, 5 ports), SaSsdt (GFX/B0D3), DPTF (DptfTa/Ff/La), CPPC, PmRef/Cpu power states, configurable TDP, TPM (dTPM2/MFT0101). Sources in `codeGetExtractPath/_thinkpad_bios.bin.extracted/ssdt/`.
+* `/ec-registers.md` - **Definitive 134-register IT8586E EC map** reconstructed from all 7 `Field (ECOR)` blocks (byte.bit offsets: `HDBM`…`PWMH/PWML`).
+* `/efi-modules.md` - **376 PE32+ module harvest** (`efi_pe/mNNN.efi` + `efi_manifest.txt` + `efi_catalog.json`): DxeMain, Phoenix (14) / Lenovo (6) fingerprints, VBT/GPU, ACPI-AML+NVRAM, SPI/SMM, SATA/RAID bundles.
+* `codeGetExtractPath/_thinkpad_bios.bin.extracted/ssdt/` - all carved SATA/DPTF/CPPC/PM/TPM SSDT `.aml` + `.dsl`.

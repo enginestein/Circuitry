@@ -1,2 +1,27 @@
-thinkpad-l450-motherboard/bios/codeGetExtractPath/_thinkpad_bios.bin.extracted/
-guide.md
+# OS / editor junk
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Derived firmware artifacts (carved ACPI/EFI binaries from the 8MB BIOS dump)
+# — regenerable with dd/iasl from the committed raw source; do NOT commit 372MB of these.
+l450-aivl1/bios/codeGetExtractPath/_thinkpad_bios.bin.extracted/
+
+# Large raw binary blobs / dumps
+*.bin
+*.rom
+*.fdb
+*.img
+*.hex
+
+# Programmer / flash tool outputs
+*.vbi
+*.spt
+
+# Python caches
+__pycache__/
+*.pyc

@@ -491,9 +491,12 @@ project root/
 
 ## Might-TODO
 
-- [ ] **Decompile Lenovo SSDTs** — extract and decompile `WLENOVOTP-SSDT1` and `LENOVOTP-SSDT2` from their absolute offsets in `600260` (around offset 176,767); these likely contain the full `_PTS`/`_WAK` platform hooks and `HKEY` hotkey dispatch table
-- [ ] **Map the `HKEY` subsystem** — find `Device (HKEY)` in `thinkpad_dsdt.dsl` and document `MHKE`/`MHKQ` method signatures; this maps all Fn key combinations to EC register writes
-- [ ] **Reconstruct the Thermal Zone map** — grep for `ThermalZone` in `thinkpad_dsdt.dsl` and cross-reference with `HT0H`/`HT1H` EC registers; build a table of thermal trip points
+- [x] **Decompile Lenovo SSDTs** — done in `acpi-hotkey.md`. `TP-SSDT1` @2420732 (56 B, stub `KOU1`), `TP-SSDT2` @2420788 (1158 B, `_BCL`/`_BCM`/`_BQC` backlight for iGPU `VID.LCD0` + dGPU `PEG.VID.LCD0`), both carved + decompiled (`lenovo_ssdt1/2.aml/.dsl`).
+- [x] **Map the `HKEY` subsystem** — full `LEN0068` method reference + complete `_Qxx` → `MHKK` bit → `MHKQ` event dispatch table in `acpi-hotkey.md` (incl. queue classification and `MHKP` dequeue order).
+- [x] **Reconstruct the EC register map (software)** — exhaustive parse of all 7 `Field (ECOR)` blocks → definitive 134-register byte.bit map in `ec-registers.md` (cross-refs `HT0H/HT1H/HFSP/PWMH/PWML/HUBS` etc. to `_Qxx` handlers and DSDT).
+- [x] **Decompile all remaining SSDTs** — 25/25 carved + decompiled, inventory in `acpi-ssdt.md` (SATA/DPTF/CPPC/PmRef/TPM; sources in `codeGetExtractPath/_thinkpad_bios.bin.extracted/ssdt/`).
+- [x] **Harvest EFI modules** — 376 PE32+ carved from `600260` (`efi_pe/`), catalog in `efi-modules.md` (Phoenix 14×, Lenovo 6×; main Phoenix DXE volume @0x5d0000–0x7b0000).
+- [ ] **Reconstruct the Thermal Zone map** — grep for `ThermalZone` in `thinkpad_dsdt.dsl` and cross-reference with `HT0H`/`HT1H` EC registers; build a table of thermal trip points (soil for the DPTF `\_PR.` dials)
 - [ ] **Physical BIOS dump** — acquire a CH341A programmer + SOIC-8 clip and dump the full Winbond W25Q64FV chip to capture the Intel Flash Descriptor and ME region (currently absent from the capsule)
 - [ ] **Intel ME analysis** — once the full dump is obtained, use `me_cleaner` to analyze and optionally neutralize the Intel ME region
 - [ ] **Power rail tracing** — use the BQ24780S datasheet + ACPI AC path (`_SB.PCI0.LPC.EC.AC._PSR`) findings to trace the 20V DC-in path through input fuses and MOSFETs on the board

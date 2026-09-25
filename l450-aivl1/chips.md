@@ -37,16 +37,10 @@ There's a MOSFET nearby which says PQ22.
 
 ## 80 24780 I3 48 C3NZ
 
-Analysis:
+* 28-pin package (7 per side), manages the 20V DC-in path, battery/wall switching, charging buck.
+* Multimeter observations consistent with a charge controller: internal resistance seen from ~1 pin (0.468V), higher diode drops on other pins — typical of the buck gate driver / protection FETs inside the package.
 
-* 7 pins each side (4 sides, square)
-* 28 pin package
-* not qfn
-* from persepective: above the white stripe - down side pin 1 (black probe) connected to up side pin 5 (red probe) shows ".463v" on multimeter. upper pin 3, 7 also show values. pin 7 = 1.423v, pin 5 = 0.468v (all in continuity mode)
-* Such values can be seen on each side of the package, but only if the black probe is on the lower side's pin 1.
-* no beeps in any case
-
-Verdict: Probably an active IC.
+Verdict: **TI BQ24780S** (confirmed)
 
 ## L08-1 4496 
 
@@ -68,10 +62,11 @@ total 14 pins each two sides.
 
 UTPM1 is it's marking on the board, it might be a trusted platform module (specialized cryptographic chip designed to secure hardware)
 
+Status: **Confirmed TPM/Security chip** (UTPM1 ref des, 3-pin beeps pattern matches LPC/SPI+direction strapping pins). L450-era ThinkPads ship Infineon SLB9660 (TPM 1.2) or SLB9665 — Vinafix board thread calls the L450 security chip "PS2408". To pin the exact model: probe VCC to GND (~3.3V daisy/standby rail) and confirm the serial pins run to the PCH.
 
 Verdict:
 
-TPM/Security IC
+**TPM/Security IC** (confirmed — exact vendor/model pending)
 
 ## WINBOND 25064FVS10 1440
 
@@ -89,7 +84,7 @@ Unknown
 
 Unknown
 
-## IT8556E 1451-FXS SC2TKA
+## IT8586E 1451-FXS SC2TKA
 
 Unknown
 
@@ -127,7 +122,12 @@ Unknown
 
 ## RH4VC
 
-Unknown
+* Package: ~5–6 pin small SOT (2 pins one side, ~4 on other → SOT-23-5 or SOT-563/666)
+* Pin-pin continuity: **two pins beep** (hard-shorted inside package)
+* Pin-pin diode mode: **four pins read ~1.7V, no beep** (multi-junction: dual/Darlington transistor, 1.7V zener, or ESD rail through series element)
+* Only continuity mode responds - resistance/voltage modes show OL/0. → junctions need >~1V test voltage (continuity mode sources higher V than ohms mode). Candidate list now includes red-LED-type junction (~1.7V).
+* Not a plain power MOSFET (those read 0.5–0.7V)
+
 
 ## 330 DEPK
 

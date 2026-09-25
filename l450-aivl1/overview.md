@@ -68,6 +68,8 @@ Board Date: 2014-11-10
 
 ## Phase 3 - Power System
 
+> In progress — see `power-tree.md` for the rail inventory + procedure.
+
 ### Power Input
 
 - [ ] Locate DC input path
